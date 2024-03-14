@@ -1,0 +1,28 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: white;
+    background: rgb(205, 43, 226);
+}
+
+nav {
+    background: rgb(57, 35, 59);
+}
+
+.login {
+    color: rgb(205, 43, 226);
+    transition: color 0.2s ease; /* Adicionando transição suave */
+}
+
+.login:hover {
+    color: white; /* Mudando a cor para branco quando o mouse passa por cima */
+    text-decoration: none; /* Remover sublinhado */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}

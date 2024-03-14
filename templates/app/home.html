@@ -1,0 +1,21 @@
+{% extends "app/base.html" %}
+{% block content %}
+  <nav class="navbar navbar-expand-lg">
+    <h3>Gestão de Tarefas</h3>
+    <div class="navbar-nav ml-auto">
+        <a class="login" href="/gestao-de-tarefas">Login</a>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h1 class="mb-4">Bem-vindo ao Sistema de Gestão de Tarefas</h1>
+    <p>Este é um projeto fictício desenvolvido por Leandro Benedito de Souza para demonstrar suas habilidades em desenvolvimento web usando o framework Django. O Sistema de Gestão de Tarefas oferece uma plataforma intuitiva e eficiente para organizar suas atividades diárias.</p>
+    <p>Com este sistema, você pode:</p>
+    <ul>
+      <li>Criar tarefas com descrição, data de conclusão e prioridade</li>
+      <li>Editar e excluir tarefas facilmente</li>
+      <li>Marcar tarefas como concluídas</li>
+      <li>Visualizar suas tarefas de maneira organizada e filtrada</li>
+    </ul>
+  </div>
+  {% endblock content %}
