@@ -1,0 +1,12 @@
+{% extends "admin/base.html" %}
+
+{% block title %}Sistema de Gestão de Tarefas{% endblock %}
+
+{% block branding %}
+<a href="/gestao-de-tarefas"><h1 id="site-name">Gestão de Tarefas</h1></a>
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+{% endif %}
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
