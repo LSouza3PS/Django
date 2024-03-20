@@ -600,7 +600,14 @@ input[type=button][disabled].default {
 }
 
 .module table {
-    border-collapse: collapse;
+    border-collapse: collapse; /* Mescla as bordas das células */
+    border-radius: 5px; /* Arredonda as bordas externas da tabela */
+    overflow: hidden; /* Garante que o arredondamento seja visível */
+}
+
+.module td, .module th {
+    padding: 10px; /* Adiciona algum espaço para o conteúdo */
+    border: 1px solid #ccc; /* Define uma borda para as células */
 }
 
 /* MESSAGES & ERRORS */
@@ -989,9 +996,7 @@ a.deletelink:focus, a.deletelink:hover {
 #user-tools a:focus, #user-tools a:hover,
 #logout-form button:active, #logout-form button:hover {
     text-decoration: none;
-    font-size: 1.03em;
-    border-bottom: 0;
-    margin-bottom: 1px;
+    color: var(--selected-row);
 }
 
 /* SIDEBAR */
@@ -1136,14 +1141,18 @@ a.deletelink:focus, a.deletelink:hover {
 /* abaixo temos novos css no módulo admin */
 
 .icone-header-tools {
-    width: 15px;
-    height: 15px;
-    vertical-align: middle;
+    width: 9px;
+    height: 9px;
+    padding-right: 2px;
 }
 
 #site-name:focus, #site-name:hover
 {
+    color: var(--selected-row);
+}
+
+.gestao-de-servicos {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    border-bottom: 0;
-    margin-bottom: 1px;
 }

@@ -1,9 +1,12 @@
 {% extends "admin/base.html" %}
 
-{% block title %}Sistema de Gestão de Tarefas{% endblock %}
+{% block title %}Sistema de Gestão de Serviços{% endblock %}
 
 {% block branding %}
-<a href="/gestao-de-tarefas"><h1 id="site-name">Gestão de Tarefas</h1></a>
+<a href="/gestao-de-servicos" class="gestao-de-servicos">
+  <img src="/static/app/img/logo.ico" style="width: 30px; height: 30px; padding-right:10px;">
+  <h1 id="site-name">Gestão de Serviços</h1>
+</a>
 {% if user.is_anonymous %}
   {% include "admin/color_theme_toggle.html" %}
 {% endif %}

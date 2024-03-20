@@ -4,7 +4,8 @@
 <html lang="{{ LANGUAGE_CODE|default:"pt-br" }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr,auto' }}">
 <head>
   <title>{% block title %}{% endblock title %}</title>
-<link rel="stylesheet" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}">
+  <link rel="icon" href="{% static "app/img/logo.ico" %}" type="image/x-icon">
+  <link rel="stylesheet" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}">
 {% block dark-mode-vars %}
   <link rel="stylesheet" href="{% static "admin/css/dark_mode.css" %}">
   <script src="{% static "admin/js/theme.js" %}" defer></script>
@@ -46,7 +47,7 @@
             {% endblock %}
             {% block userlinks %}
                 {% if site_url %}
-                    <a href="{{ site_url }}"><img class="icone-header-tools" src="{% static "/admin/img/icone-home.png" %}"> Home</a> /
+                    <a href="{{ site_url }}"><img class="icone-header-tools" src="{% static "/admin/img/home.ico" %}">{% translate 'Home' %}</a> /
                 {% endif %}
                 {% if user.is_active and user.is_staff %}
                     {% url 'django-admindocs-docroot' as docsroot %}
@@ -55,11 +56,11 @@
                     {% endif %}
                 {% endif %}
                 {% if user.has_usable_password %}
-                <a href="{% url 'admin:password_change' %}">{% translate 'Change password' %}</a> /
+                <a href="{% url 'admin:password_change' %}"><img class="icone-header-tools" src="{% static "/admin/img/senha.ico" %}">{% translate 'Change password' %}</a> /
                 {% endif %}
                 <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
                     {% csrf_token %}
-                    <button type="submit">{% translate 'Log out' %}</button>
+                    <button type="submit"><img class="icone-header-tools" src="{% static "/admin/img/exit.ico" %}">{% translate 'Log out' %}</button>
                 </form>
                 {% include "admin/color_theme_toggle.html" %}
             {% endblock %}
