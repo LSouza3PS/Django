@@ -1,21 +1,46 @@
 {% extends "app/base.html" %}
+{% load static %}
 {% block content %}
-  <nav class="navbar navbar-expand-lg">
-    <h3>Gestão de Tarefas</h3>
-    <div class="navbar-nav ml-auto">
-        <a class="login" href="/gestao-de-servicos">Login</a>
+<!-- header -->
+  <div class="bg-blue-700">
+    <div class="container max-w-6xl mx-auto h-16 px-4 flex items-center text-gray-200">
+      <h3 class="text-2xl">Gestão de Tarefas</h3>
+      <a class="ml-auto flex items-center space-x-2" href="/gestao-de-servicos">
+        <p>Login</p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+        </svg>        
+      </a>
     </div>
-  </nav>
-
-  <div class="container mt-5">
-    <h1 class="mb-4">Bem-vindo ao Sistema de Gestão de Tarefas</h1>
-    <p>Este é um projeto fictício desenvolvido por Leandro Benedito de Souza para demonstrar suas habilidades em desenvolvimento web usando o framework Django. O Sistema de Gestão de Tarefas oferece uma plataforma intuitiva e eficiente para organizar suas atividades diárias.</p>
-    <p>Com este sistema, você pode:</p>
-    <ul>
-      <li>Criar tarefas com descrição, data de conclusão e prioridade</li>
-      <li>Editar e excluir tarefas facilmente</li>
-      <li>Marcar tarefas como concluídas</li>
-      <li>Visualizar suas tarefas de maneira organizada e filtrada</li>
-    </ul>
   </div>
+<!-- /header -->
+
+<!-- info -->
+  <div class="grid grid-cols-2 gap-2 m-10">
+    <div class="border border-gray-200 rounded-md shadow overflow-hidden bg-gray-50">
+      <div class="p-4 text-justify space-y-2">
+        <p class="text-xl text-gray-500 font-semibold">Bem-vindo ao Sistema de Gestão de Tarefas</p>
+        <p>Este é um projeto fictício desenvolvido por Leandro Benedito de Souza para demonstrar suas habilidades em desenvolvimento web usando o framework Django.</p>
+        <p>O Sistema de Gestão de Tarefas oferece uma plataforma intuitiva e eficiente para organizar suas atividades diárias.</p>
+        <p>Com este sistema, você pode:</p>
+        <ul class="ml-6 italic space-y-1 list-disc list-outside">
+          <li>Criar tarefas com descrição, data de conclusão e prioridade;</li>
+          <li>Editar e excluir tarefas facilmente;</li>
+          <li>Marcar tarefas como concluídas;</li>
+          <li>Visualizar suas tarefas de maneira organizada e filtrada.</li>
+        </ul>
+        <button class="inline-flex items-center bg-yellow-500 px-3 py-2 border border-yellow-200 rounded text-white font-medium justify-center space-x-2">
+          <p>Acessar</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="border border-gray-200 rounded-md shadow overflow-hidden">
+      <img src="{% static 'app/img/teste.png' %}" alt="">
+    </div>
+  </div>
+  <!-- /info -->
   {% endblock content %}
