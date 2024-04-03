@@ -5,13 +5,13 @@ from .models import Cliente, Servico, SolicitacaoServico, ItemSolicitacao, Outro
 class ClienteAdmin(admin.ModelAdmin):
     fieldsets = (
         ('Informações Pessoais', {
-            'fields': ('codigo', 'tipo_pessoa', 'cpf_cnpj', 'rg_ie', 'nome', 'sexo', 'carteira_trabalho', 'data_nascimento'),
+            'fields': ('tipo_pessoa', 'cpf_cnpj', 'rg_ie', 'nome', 'sexo', 'carteira_trabalho', 'data_nascimento'),
         }),
         ('Informações de Contato', {
-            'fields': ('telefone', 'telefone2', 'celular', 'email', 'fax'),
+            'fields': ('celular', 'email', 'telefone', 'telefone2', 'fax'),
         }), 
         ('Endereço', {
-            'fields': ('cep', 'rua_av', 'numero_rua_av', 'bairro', 'pais', 'uf', 'cidade_municipio', 'complemento'),
+            'fields': ('rua_av', 'numero_rua_av', 'complemento', 'bairro', 'pais', 'uf', 'cidade_municipio', 'cep'),
         }),
     )
     list_display = ['codigo', 'tipo_pessoa', 'cpf_cnpj', 'rg_ie', 'nome', 'sexo', 'carteira_trabalho', 'data_nascimento', 'telefone', 'telefone2', 'celular', 'email', 'fax', 'cep', 'rua_av', 'numero_rua_av', 'bairro', 'pais', 'uf', 'cidade_municipio', 'complemento']
@@ -19,7 +19,7 @@ class ClienteAdmin(admin.ModelAdmin):
     list_filter = ('tipo_pessoa', 'sexo', 'bairro', 'pais', 'uf', 'cidade_municipio')
 
 class ServicoAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'descricao', 'preco')
+    list_display = ('nome', 'descricao')
     search_fields = ['nome']
 
 class ItemSolicitacaoInline(admin.TabularInline):
@@ -28,8 +28,8 @@ class ItemSolicitacaoInline(admin.TabularInline):
 
 class SolicitacaoServicoAdmin(admin.ModelAdmin):
     inlines = [ItemSolicitacaoInline]
-    list_display = ('cliente', 'servico', 'status', 'data_solicitacao')
-    list_filter = ('status', 'data_solicitacao')
+    list_display = ('cliente', 'servico', 'status', 'data_entrega', 'data_solicitacao')
+    list_filter = ('status', 'data_solicitacao', 'data_entrega')
     search_fields = ['cliente__username', 'servico__nome']
 
 class OutroModuloAdmin(admin.ModelAdmin):

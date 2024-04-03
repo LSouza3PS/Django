@@ -2,9 +2,12 @@
 {% load static %}
 {% block content %}
 <!-- header -->
-  <div class="bg-blue-700">
-    <div class="container max-w-6xl mx-auto h-16 px-4 flex items-center text-gray-200">
-      <h3 class="text-2xl">Gestão de Tarefas</h3>
+  <div class="bg-blue-800">
+    <div class="container mx-auto h-16 px-4 flex items-center text-gray-200">
+      <div class="space-x-2 flex items-center">
+        <img class="w-7 h-7" src="{% static '/app/img/logo.ico' %}" alt="">
+        <h3 class="text-2xl">Gestão de Serviços</h3>
+      </div>
       <a class="ml-auto flex items-center space-x-2" href="/gestao-de-servicos">
         <p>Login</p>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -16,30 +19,29 @@
 <!-- /header -->
 
 <!-- info -->
-  <div class="grid grid-cols-2 gap-2 m-10">
-    <div class="border border-gray-200 rounded-md shadow overflow-hidden bg-gray-50">
-      <div class="p-4 text-justify space-y-2">
-        <p class="text-xl text-gray-500 font-semibold">Bem-vindo ao Sistema de Gestão de Tarefas</p>
-        <p>Este é um projeto fictício desenvolvido por Leandro Benedito de Souza para demonstrar suas habilidades em desenvolvimento web usando o framework Django.</p>
-        <p>O Sistema de Gestão de Tarefas oferece uma plataforma intuitiva e eficiente para organizar suas atividades diárias.</p>
+  <div class="space-y-6 xl:space-y-0 xl:grid xl:grid-cols-3 xl:gap-4 m-4 xl:m-10">
+    <div class="border border-gray-200 rounded-md shadow overflow-hidden bg-gray-50 h-auto">
+      <div class="p-4 text-justify text-xs md:text-base xl:text-xs space-y-2 h-full">
+        <p class="text-center sm:text-justify text-xl md:text-2xl text-gray-500 font-semibold mt-2 mb-6">Bem-vindo ao Sistema de Gestão de Serviços</p>
+        <p>Este é um projeto bastante simplificado e fictício somente com o intuito de demonstrar minhas habilidades em desenvolvimento web usando o framework Django e Tailwindcss.</p>
+        <p>O Sistema de Gestão de Serviços oferece uma plataforma exemplificando a organização dos serviços, mostrando todo conceito de CRUD e sistemas MVC / MTV.</p>
         <p>Com este sistema, você pode:</p>
         <ul class="ml-6 italic space-y-1 list-disc list-outside">
-          <li>Criar tarefas com descrição, data de conclusão e prioridade;</li>
-          <li>Editar e excluir tarefas facilmente;</li>
-          <li>Marcar tarefas como concluídas;</li>
-          <li>Visualizar suas tarefas de maneira organizada e filtrada.</li>
+          <li>Criar, Editar, Visualizar, Filtrar e Excluir: Serviços, Clientes, Solicitações, Usuários e Grupo de Usuários de maneira fácil e rápida;</li>
+          <li>Pode gerir usuários dando devidos acessos com a criação de grupos;</li>
+          <li>Acessá-lo de forma responsiva em Celulares, Tablets e Desktops.</li>
         </ul>
-        <button class="inline-flex items-center bg-yellow-500 px-3 py-2 border border-yellow-200 rounded text-white font-medium justify-center space-x-2">
+        <a class="inline-flex items-center bg-yellow-500 px-3 py-2 border border-yellow-200 rounded text-white font-medium justify-center space-x-2" href="/gestao-de-servicos">
           <p>Acessar</p>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
           </svg>
-        </button>
+        </a>
       </div>
     </div>
 
-    <div class="border border-gray-200 rounded-md shadow overflow-hidden">
-      <img src="{% static 'app/img/teste.png' %}" alt="">
+    <div class="xl:col-span-2 border border-gray-200 rounded-md shadow overflow-hidden">
+      <img class="w-full h-full" src="{% static 'app/img/teste.png' %}" alt="">
     </div>
   </div>
   <!-- /info -->
