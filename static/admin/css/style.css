@@ -1,3 +1,89 @@
+html[data-theme="light"],
+:root {
+    --primary: rgb(59, 130, 246);
+    --secondary: rgb(30, 64, 175);
+    --accent: #fff;
+    --primary-fg: #fff;
+
+    --body-fg: #333;
+    --body-bg: #fff;
+    --body-quiet-color: #666;
+    --body-loud-color: #000;
+
+    --header-color: #fff;
+    --header-branding-color: var(--accent);
+    --header-bg: var(--secondary);
+    --header-link-color: var(--primary-fg);
+
+    --breadcrumbs-fg: #c4dce8;
+    --breadcrumbs-link-fg: var(--body-bg);
+    --breadcrumbs-bg: var(--primary);
+
+    --link-fg: rgb(29, 78, 216);
+    --link-hover-color: rgb(30, 58, 138);
+    --link-selected-fg: #615bb2;
+
+    --hairline-color: rgb(191, 219, 254);
+    --border-color: #ccc;
+
+    --error-fg: #ba2121;
+
+    --message-success-bg: #dfd;
+    --message-warning-bg: #ffc;
+    --message-error-bg: #ffefef;
+
+    --darkened-bg: rgb(238, 242, 255); /* A bit darker than --body-bg */
+    --selected-bg: #e4e4e4; /* E.g. selected table cells */
+    --selected-row: rgb(191, 219, 254);
+
+    --button-fg: #fff;
+    --button-bg: var(--primary);
+    --button-hover-bg: #609ab6;
+    --default-button-bg: var(--secondary);
+    --default-button-hover-bg: #205067;
+    --close-button-bg: #747474;
+    --close-button-hover-bg: #333;
+    --delete-button-bg: #ba2121;
+    --delete-button-hover-bg: #a41515;
+
+    --object-tools-fg: var(--button-fg);
+    --object-tools-bg: rgb(58, 173, 48);
+    --object-tools-hover-bg: var(--close-button-hover-bg);
+
+}
+
+.module table {
+    border-collapse: collapse; /* Mescla as bordas das células */
+    border-radius: 5px; /* Arredonda as bordas externas da tabela */
+    overflow: hidden; /* Garante que o arredondamento seja visível */
+}
+
+.module td, .module th {
+    padding: 10px; /* Adiciona algum espaço para o conteúdo */
+    border: 1px solid #ccc; /* Define uma borda para as células */
+}
+
+.icone-header-tools {
+    width: 9px;
+    height: 9px;
+    padding-right: 2px;
+}
+
+#site-name:focus, #site-name:hover
+{
+    color: var(--selected-row);
+}
+
+.gestao-de-servicos {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+table {
+    white-space: nowrap;
+}
+
 .sticky {
     position: sticky;
     top: 0;
