@@ -1,4 +1,4 @@
-![sistema](https://github.com/LSouza3PS/Django/static/app/img/sistema.png)
+![sistema](https://raw.githubusercontent.com/LSouza3PS/Django/develop/static/app/img/sistema.png)
 
 # Projeto Fictício: Sistema de Gestão de Serviços com Django
 
