@@ -1,20 +1,19 @@
-# Projeto Fictício: Sistema de Gestão de Tarefas com Django
+# Projeto Fictício: Sistema de Gestão de Serviços com Django
 
-Este repositório demonstra minhas habilidades em desenvolvimento web usando o framework Django. O projeto fictício é um Sistema de Gestão de Tarefas, oferecendo uma plataforma intuitiva e eficiente para organizar suas atividades diárias.
+Este é um projeto bastante simplificado e fictício, somente com o intuito de demonstrar minhas habilidades em desenvolvimento web usando o framework Django e Tailwindcss.
+
+O Sistema de Gestão de Serviços oferece uma plataforma exemplificando a organização dos serviços, mostrando todo conceito de CRUD e sistemas MVC / MTV.
 
 ## Funcionalidades Principais:
 
-- **Cadastro de Usuários:** Registre-se e faça login para acessar todas as funcionalidades do sistema.
-- **Gestão de Tarefas:** Adicione, edite e exclua tarefas com facilidade, atribuindo prazos e categorias.
-- **Priorização:** Destaque tarefas importantes e classifique-as com base na urgência.
-- **Colaboração:** Compartilhe tarefas e atribua responsabilidades a outros usuários.
-- **Visualizações Personalizadas:** Veja suas tarefas em diferentes modos, como lista, calendário ou kanban.
+- **Criar / Editar / Visualizar / Filtrar / Excluir:** Serviços, Clientes, Solicitações, Usuários e Grupo de Usuários de maneira fácil e rápida;
+- **Segurança:** Pode gerir usuários dando devidos acessos com a criação de grupos;
+- **Responsividade:** Acessar o sistema em Celulares, Tablets e Notebooks.
 
 ## Tecnologias Utilizadas:
 
 - **Django:** Framework web Python para desenvolvimento rápido e eficiente.
-- **Django REST Framework:** Crie APIs poderosas e flexíveis para integração com outras aplicações.
-- **HTML, CSS e JavaScript:** Desenvolvimento de interfaces responsivas e dinâmicas.
+- **Tailwindcss:** Desenvolvimento de interfaces responsivas e dinâmicas.
 - **Banco de Dados SQLite:** Armazenamento eficiente e fácil configuração para projetos menores.
 
 ## Como Executar o Projeto:
@@ -23,8 +22,9 @@ Este repositório demonstra minhas habilidades em desenvolvimento web usando o f
 2. Crie e ative um ambiente virtual: `python -m venv env` e `source env/bin/activate` (ou `env\Scripts\activate` no Windows).
 3. Instale as dependências: `pip install -r requirements.txt`
 4. Aplique as migrações: `python manage.py migrate`
-5. Inicie o servidor de desenvolvimento: `python manage.py runserver`
+5. Crie um usuário: `python manage.py createsuperuser` (configure o nome de usuário, e-mail e senha).
+6. Inicie o servidor de desenvolvimento: `python manage.py runserver`
 
-Acesse [http://localhost:8000/](http://localhost:8000/) em seu navegador para explorar o Sistema de Gestão de Tarefas.
+Acesse [http://localhost:8000/](http://localhost:8000/) em seu navegador para explorar o Sistema de Gestão de Serviços.
 
 Fique à vontade para contribuir, reportar problemas ou sugerir melhorias. Este projeto é uma demonstração das minhas habilidades em Django, e estou aberto a feedbacks construtivos.
