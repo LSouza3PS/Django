@@ -1,7 +1,6 @@
 # Projeto Fictício: Sistema de Gestão de Serviços com Django
 
 ![sistema](https://raw.githubusercontent.com/LSouza3PS/Django/develop/static/app/img/sistema.png)
-
 Este é um projeto bastante simplificado e fictício, somente com o intuito de demonstrar minhas habilidades em desenvolvimento web usando o framework Django e Tailwindcss.
 
 O Sistema de Gestão de Serviços oferece uma plataforma exemplificando a organização dos serviços, mostrando todo conceito de CRUD e sistemas MVC / MTV.
